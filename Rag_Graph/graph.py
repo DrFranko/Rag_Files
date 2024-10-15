@@ -188,7 +188,6 @@ from IPython.display import Image, display
 try:
     display(Image(app.get_graph().draw_mermaid_png()))
 except Exception:
-    # This requires some extra dependencies and is optional
     pass
     
 from pprint import pprint
@@ -205,5 +204,4 @@ for output in app.stream(inputs):
         # pprint.pprint(value["keys"], indent=2, width=80, depth=None)
     pprint("\n---\n")
 
-# Final generation
 pprint(value['documents'][0].dict()['metadata']['description'])
